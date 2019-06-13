@@ -8,14 +8,14 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/dileepkumar9030/Node_React_app.git"
+    "url": "git+https://github.com/dileepkumar9030/MERN-APP.git"
   },
   "author": "Dileep",
   "license": "ISC",
   "bugs": {
-    "url": "https://github.com/dileepkumar9030/Node_React_app/issues"
+    "url": "https://github.com/dileepkumar9030/MERN-APP/issues"
   },
-  "homepage": "https://github.com/dileepkumar9030/Node_React_app#readme",
+  "homepage": "https://github.com/dileepkumar9030/MERN-APP#readme",
   "devDependencies": {
     "nodemon": "^1.18.11"
   },
