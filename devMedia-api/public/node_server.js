@@ -14,7 +14,7 @@ server.on('request', (request, response)=>{
         response.end()
     })
     response.on('error', err=>{
-        console.log(err);
+        console.log(err); 
     })
 
     // request.on('data', chunk=>{
