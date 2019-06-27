@@ -5,9 +5,9 @@ const router = express.Router();
 //@desc     Test route
 //@access   Public
 router.post("/", (req, res) => {
-  console.log(req.body);
+  console.log(req);
 
-  res.send("User Route");
+  res.send("dileep route");
 });
 
 module.exports = router;
