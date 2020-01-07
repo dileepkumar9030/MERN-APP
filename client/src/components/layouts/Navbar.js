@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { Fragment } from 'react';
 import { Link } from 'react-router-dom';
 import { connect } from 'react-redux';
 import { logout } from '../../actions/authAction';
@@ -12,28 +12,12 @@ const Navbar = ({ auth: { isAuthenticated, loading }, logout }) => {
           <i className='fas fa-code' /> DevConnector
         </Link>
       </h1>
-      {/* <ul>
-        <li>
-          <a href='profiles.html'>Developers</a>
-        </li>
-        <li>
-          <Link to='register'>Register</Link>
-        </li>
-        <li>
-          <Link to='login'>Login</Link>
-        </li>
-      </ul>
       <ul>
         <li>
-          <a onClick={logout} href='profiles.html'>
-            <i className='fas fa-sign-out-alt'></i>{' '}
-            <span className='hide-sm'>Logout</span>
-          </a>
+          <Link to='/profiles'>Developers</Link>
         </li>
-      </ul> */}
-      {!loading &&
-        (isAuthenticated ? (
-          <ul>
+        {!loading && isAuthenticated ? (
+          <Fragment>
             <li>
               <Link to='/dashboard'>
                 <i className='fas fa-user'></i>{' '}
@@ -46,20 +30,18 @@ const Navbar = ({ auth: { isAuthenticated, loading }, logout }) => {
                 <span className='hide-sm'>Logout</span>
               </a>
             </li>
-          </ul>
+          </Fragment>
         ) : (
-          <ul>
-            <li>
-              <a href='#!'>Developers</a>
-            </li>
+          <Fragment>
             <li>
               <Link to='/register'>Register</Link>
             </li>
             <li>
               <Link to='/login'>Login</Link>
             </li>
-          </ul>
-        ))}
+          </Fragment>
+        )}
+      </ul>
     </nav>
   );
 };
@@ -73,7 +55,4 @@ const mapStateToProps = state => ({
   auth: state.auth
 });
 
-export default connect(
-  mapStateToProps,
-  { logout }
-)(Navbar);
+export default connect(mapStateToProps, { logout })(Navbar);

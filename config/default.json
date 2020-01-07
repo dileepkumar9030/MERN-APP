@@ -4,3 +4,6 @@
   "githubClientId": "617a733cf36603751fe3",
   "githubSecret": "8592682a443655c92bc43ca2df09484ae3d31e2b"
 }
+
+// "mongoURI": "mongodb+srv://dileep123:dileep123@devconnector-srmtb.mongodb.net/test?retryWrites=true&w=majority",
+// "mongodb://localhost:27017/DevConnector",
