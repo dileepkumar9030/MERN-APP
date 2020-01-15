@@ -1,4 +1,4 @@
-import React, { Fragment, useEffect } from 'react';
+import React, { useEffect } from 'react';
 import PropTypes from 'prop-types';
 import { connect } from 'react-redux';
 import Spinner from '../layouts/Spinner';
@@ -7,7 +7,7 @@ import { getGithubRepos } from '../../actions/profileAction';
 const ProfileGithub = ({ username, getGithubRepos, repos }) => {
   useEffect(() => {
     getGithubRepos(username);
-  }, [getGithubRepos]);
+  }, [getGithubRepos, username]);
   return (
     <div className='profile-github'>
       <h2 className='text-primary my-1'>Github Repos</h2>
@@ -21,7 +21,7 @@ const ProfileGithub = ({ username, getGithubRepos, repos }) => {
                 <a
                   href={repo.html_url}
                   target='_blank'
-                  rel='noopener noreferer'
+                  rel='noopener noreferrer'
                 >
                   {repo.name}
                 </a>
