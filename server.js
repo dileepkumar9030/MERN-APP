@@ -1,6 +1,6 @@
 const express = require('express');
 const connectDb = require('./config/db');
-const path = require('poth');
+const path = require('path');
 const app = express();
 
 //connect Database
